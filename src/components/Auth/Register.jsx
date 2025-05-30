@@ -60,6 +60,7 @@ export default function Register() {
           <input
             id="username"
             name="username"
+            autoComplete="username"
             type="text"
             required
             value={formData.username}
@@ -79,11 +80,12 @@ export default function Register() {
           <input
             id="email"
             name="email"
+            autoComplete="email"
             type="email"
             required
             value={formData.email}
             onChange={handleChange}
-            placeholder="you@example.com"
+            placeholder="you@email.com"
             className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-500 transition"
           />
         </div>
