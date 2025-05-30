@@ -22,7 +22,7 @@ export default function Register() {
     setError("");
     setSuccess("");
     try {
-      const data = await registerUser(formData);
+      await registerUser(formData);
       setSuccess("Registration successful! You can now log in.");
       setFormData({ username: "", email: "", password: "" });
     } catch (err) {

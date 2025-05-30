@@ -246,6 +246,9 @@ const Notes = () => {
   const summaries = () => {
     navigate("/summaries");
   };
+  const qna = () => {
+    navigate("/flashcards");
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -276,9 +279,6 @@ const Notes = () => {
                   <h1 className="text-lg lg:text-xl font-bold text-white">
                     AI NOTEBOOK
                   </h1>
-                  <p className="text-xs lg:text-sm text-gray-400">
-                    vibe check ✨
-                  </p>
                 </div>
               </div>
               {/* Mobile toggle button could go here if needed */}
@@ -312,7 +312,10 @@ const Notes = () => {
                 <FiPlus className="group-hover:rotate-90 transition-transform duration-200" />
                 <span>Summarize</span>
               </button>
-              <button className="w-full bg-gradient-to-r from-purple-500 to-cyan-500 text-white py-2 lg:py-3 rounded-xl font-medium hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-200 flex items-center justify-center space-x-2 group text-sm lg:text-base">
+              <button
+                onClick={qna}
+                className="w-full bg-gradient-to-r from-purple-500 to-cyan-500 text-white py-2 lg:py-3 rounded-xl font-medium hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-200 flex items-center justify-center space-x-2 group text-sm lg:text-base"
+              >
                 <FiPlus className="group-hover:rotate-90 transition-transform duration-200" />
                 <span>Know Q & A</span>
               </button>
